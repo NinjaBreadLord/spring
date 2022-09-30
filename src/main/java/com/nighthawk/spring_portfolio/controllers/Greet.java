@@ -18,6 +18,7 @@ public class Greet {
 
         // model attributes are visible to Thymeleaf when HTML is "pre-processed"
         model.addAttribute("name", name);
+        model.addAttribute("word", word)
 
         // load HTML VIEW (greet.html)
         return "greet"; 
