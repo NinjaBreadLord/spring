@@ -14,11 +14,11 @@ public class Greet {
     // @GetMapping handles GET request for /greet, maps it to greeting() method
     @GetMapping("/greet")
     // @RequestParam handles variables binding to frontend, defaults, etc
-    public String greeting(@RequestParam(name="name", required=false, defaultValue="World") String name, Model model) {
+    public String greeting(@RequestParam(name="name", required=false, defaultValue="World") String name, String words, Model model) {
 
         // model attributes are visible to Thymeleaf when HTML is "pre-processed"
         model.addAttribute("name", name);
-        model.addAttribute("word", word)
+        model.addAttribute("word", words);
 
         // load HTML VIEW (greet.html)
         return "greet"; 
